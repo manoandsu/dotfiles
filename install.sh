@@ -7,6 +7,8 @@ echo "Setting up dotfiles..."
 
 mkdir -p "$HOME/.config"
 
-ln -sf "$DOTFILES/.config/nvim" "$HOME/.config/nvim"
+ln -sfn "$DOTFILES/.config/nvim" "$HOME/.config/nvim"
+ln -sfn "$DOTFILES/.config/tmux/.tmux.conf" "$HOME/.tmux.conf"
+ln -sfn ~/dotfiles/.config/tmuxinator ~/.config/tmuxinator
 
 echo "Done."
