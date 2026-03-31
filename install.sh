@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES="$HOME/dotfiles"
-
 echo "Setting up dotfiles..."
-
 mkdir -p "$HOME/.config"
 
-ln -sfn "$DOTFILES/.config/nvim" "$HOME/.config/nvim"
-ln -sfn "$DOTFILES/.config/tmux/.tmux.conf" "$HOME/.tmux.conf"
-ln -sfn ~/dotfiles/.config/tmuxinator ~/.config/tmuxinator
+ln -sfn ~/dotfiles/.config/nvim ~/.config/
+ln -sfn ~/dotfiles/.config/tmux/.tmux.conf ~/.tmux.conf
+ln -sfn ~/dotfiles/.config/tmuxinator ~/.config/
+ln -sfn ~/dotfiles/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 echo "Done."
