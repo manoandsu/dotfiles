@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ext="HDMI-A-1"
+laptop="eDP-1"
+
+if hyprctl monitors | grep -q "^Monitor $ext"; then
+  for w in {1..5}; do
+    hyprctl dispatch workspace $w
+    hyprctl dispatch moveworkspacetomonitor $w $ext
+  done
+  hyprctl dispatch workspace 6
+  hyprctl dispatch moveworkspacetomonitor 6 $laptop
+else
+  for w in {1..6}; do
+    hyprctl dispatch workspace $w
+    hyprctl dispatch moveworkspacetomonitor $w $laptop
+  done
+fi

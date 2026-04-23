@@ -9,4 +9,7 @@ ln -sfn ~/dotfiles/.config/tmux/.tmux.conf ~/.tmux.conf
 ln -sfn ~/dotfiles/.config/tmuxinator ~/.config/
 ln -sfn ~/dotfiles/.config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
+rm ~/.config/hypr/autostart.conf
+ln -sfn ~/dotfiles/.config/hypr/autostart.conf ~/.config/hypr/autostart.conf
+
 echo "Done."
